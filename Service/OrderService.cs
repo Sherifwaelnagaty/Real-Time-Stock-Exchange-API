@@ -28,6 +28,7 @@ namespace Service
         {
             return _orderRepository.GetOrdersHistory(Symbol);
         }
+
     }
    
 }

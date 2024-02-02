@@ -10,7 +10,7 @@ namespace Core.Repository
     public interface IStockRepository<T> where T : Stock
     {
         IEnumerable<T> GetStockHistory(string Symbol);
-        IEnumerable<T> GetStockData();
+        IEnumerable<T> GetStockData(int pageNumber, int pageSize);
 
     }
 }
