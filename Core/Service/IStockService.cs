@@ -12,6 +12,7 @@ namespace Service
     public interface IStockService
     {
         IEnumerable<Stock> GetStockHistory(string Symbol);
-        IEnumerable<Stock> GetStockData();
+        IEnumerable<Stock> GetStockData(int pageNumber, int pageSize);
+        void UpdateStockPrice(string symbol, decimal newPrice);
     }
 }

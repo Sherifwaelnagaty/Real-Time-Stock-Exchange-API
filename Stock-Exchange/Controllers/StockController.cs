@@ -17,9 +17,9 @@ namespace Algoriza_Project_2023BE83.Controllers
             _stockService = stockService;
         }
         [HttpGet("stocks")]
-        public IEnumerable<Stock> GetStockData()
+        public IEnumerable<Stock> GetStockData(int pageNumber, int pageSize)
         {
-            return _stockService.GetStockData();
+            return _stockService.GetStockData(pageNumber,pageSize);
         }
         [HttpGet("stocks/{symbol}/history")]
         public IEnumerable<Stock> GetStockHistory(string symbol)

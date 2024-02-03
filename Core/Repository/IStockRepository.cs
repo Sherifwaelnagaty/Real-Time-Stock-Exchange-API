@@ -11,6 +11,7 @@ namespace Core.Repository
     {
         IEnumerable<T> GetStockHistory(string Symbol);
         IEnumerable<T> GetStockData(int pageNumber, int pageSize);
+        void UpdateStockPrice(string symbol, decimal newPrice);
 
     }
 }

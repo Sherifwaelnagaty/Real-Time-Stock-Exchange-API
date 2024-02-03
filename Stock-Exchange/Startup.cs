@@ -11,7 +11,8 @@ using Service.Service;
 using Core.Repository;
 using Repository;
 using Service;
-using Service.Helpers;
+using Repository.Helpers;
+using Stock_Exchange.Hubs;
 
 
 namespace Algoriza_Project_2023BE83
@@ -40,6 +41,7 @@ namespace Algoriza_Project_2023BE83
             services.AddTransient<IStockService,StockService>();
             services.AddScoped(typeof(IStockRepository<>), typeof(StockRepository<>));
             services.AddMvc();
+            services.AddSignalR();
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAuthentication(options =>
@@ -90,6 +92,8 @@ namespace Algoriza_Project_2023BE83
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<StockUpdatesHub>("/stockUpdatesHub");
+
             });
         }
     }
