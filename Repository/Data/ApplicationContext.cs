@@ -16,6 +16,7 @@ namespace Repository.Data
     using System.Text;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+    using Core.Models;
 
     namespace Repository.Data
     {
@@ -27,6 +28,8 @@ namespace Repository.Data
             }
             protected override void OnModelCreating(ModelBuilder modelBuilder)
             {
+                new StockMap(modelBuilder.Entity<Stock>());
+                new OrdersMap(modelBuilder.Entity<Orders>());
                 base.OnModelCreating(modelBuilder);
             }
         }
