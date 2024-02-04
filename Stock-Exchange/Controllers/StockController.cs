@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service;
 
-namespace Algoriza_Project_2023BE83.Controllers
+namespace StockExchange.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

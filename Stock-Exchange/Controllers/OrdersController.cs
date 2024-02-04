@@ -5,7 +5,7 @@ using Core.Models;
 using Microsoft.AspNetCore.Authorization;
 using Core.Domain;
 using Core.Service;
-namespace Algoriza_Project_2023BE83.Controllers;
+namespace StockExchange.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 public class OrdersController : ControllerBase

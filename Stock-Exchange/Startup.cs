@@ -15,7 +15,7 @@ using Repository.Helpers;
 using Stock_Exchange.Hubs;
 
 
-namespace Algoriza_Project_2023BE83
+namespace StockExchange
 {
     public class Startup
     {
@@ -65,7 +65,7 @@ namespace Algoriza_Project_2023BE83
             });
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Algoriza_Project_2023BE83", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "StockExchange", Version = "v1" });
             });
         }
 

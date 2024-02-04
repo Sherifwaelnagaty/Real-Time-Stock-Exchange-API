@@ -3,7 +3,7 @@ using Core.Models;
 using Core.Service;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Algoriza_Project_2023BE83.Controllers
+namespace StockExchange.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
